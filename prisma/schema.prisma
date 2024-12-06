@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Jatek {
+  id         Int      @id @default(autoincrement())
+  megnevezes String
+  anyag      Anyag
+  suly       Float
+  gyerekek   GyerekJatek[]
+}
+
+model Gyerek {
+  id       Int      @id @default(autoincrement())
+  nev      String
+  cim      String
+  joVolt   Boolean
+  jatekok  GyerekJatek[]
+}
+
+model GyerekJatek {
+  id        Int     @id @default(autoincrement())
+  gyerekId  Int
+  jatekId   Int
+  gyerek    Gyerek  @relation(fields: [gyerekId], references: [id])
+  jatek     Jatek   @relation(fields: [jatekId], references: [id])
+}
+
+enum Anyag {
+  wood
+  metal
+  plastic
+  other
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"create-toy.dto.js","sourceRoot":"","sources":["../../../src/toys/dto/create-toy.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qDAAuE;AACvE,2CAAuC;AAEvC,MAAa,QAAQ;CAWpB;AAXD,4BAWC;AATC;IADC,IAAA,0BAAQ,GAAE;;4CACQ;AAGnB;IADC,IAAA,wBAAM,EAAC,cAAK,CAAC;;uCACD;AAKb;IAHC,IAAA,0BAAQ,GAAE;IACV,IAAA,qBAAG,EAAC,CAAC,CAAC;IACN,IAAA,qBAAG,EAAC,IAAI,CAAC;;sCACG"}
